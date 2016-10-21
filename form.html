@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+    
+    <head>
+        <title>HTML Forms</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
+       <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        
+        <style>
+            
+            body{
+                color: silver;
+                width: 100%;
+                min-height: 100%;
+                margin: 0;
+                position: relative;
+                text-align: center;
+                align-content: center;
+                font-family: digital-7;
+            }
+            
+            .email{
+                background-color: dimgrey;
+                color: white;
+            }
+        
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Hello!</h1>
+        
+        <h3>Please submit your name for more info about japanese instruments!</h3>
+        
+        <form action="javascript:submitForm()">
+            <fieldset>
+                <h1>Personal Info</h1>
+                <input type="text" name="firstname" placeholder="First Name">
+                <input type="text" name="lastname" placeholder="Last Name">
+                <h2>Email</h2>
+                <input type="text" name="email" class="email">
+                <h2>Gender</h2>
+                <!-- we can group radio buttons with the same attribute -->
+                <input type="radio" name="gender" value="male">
+                Male<input type="radio" name="gender" value="female">
+                Female<input type="radio" name="gender" value="other">
+                Other
+                <hr>
+                What's your favorite color?
+                <input type="color" name="favoriteColor">
+                <hr>
+                <input type="submit">
+            </fieldset>
+        
+        </form>
+        
+        <p>Thank You! We'll contact you soon <span id="username">[Your Name]</span>!</p>
+        
+       <!-- <script>
+            function submitForm(){
+               // alert("Form submitted;
+                
+                var prefix = "";
+                
+                var gender = $("input[name='gender']:checked").val();
+                if(gender=="male"){
+                    prefix="Mr.";
+                }
+                if(gender=="female"){
+                    prefix="Ms."
+                }
+                //alert(gender);
+                var fullname = $("input[name='firstname']").val() + " " + $("input[name='lastname']").val();
+                $("#username").html(prefix + " " + fullname);
+                
+                var favoriteColor = $("input[name='favoriteColor']").val();
+                $("body").css("background-color", favoriteColor);
+            }
+        </script>
+-->
+    
+    </body>
+
+
+</html>
